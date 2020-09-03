@@ -1,0 +1,144 @@
+/*
+=============== 
+Fonts
+===============
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+      --cl-orange: #ec873d;
+      --cl-bg: #daf3e4;
+      --ff-primary: 'Acme', sans-serif;
+      --cl-article-1: #e7a17e;
+      --border-radius: 15px;
+      --margin-auto: 0 auto;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*, ::after, ::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font-family: var(--ff-primary);
+      line-height: 1.2;
+      background: var(--cl-bg);
+}
+
+.menu {
+      padding: 5rem 0;
+}
+
+.title {
+      font-size: 3rem;
+      text-align: center;
+}
+
+.underline {
+      height: 4px;
+      width: 17rem;
+      background: var(--cl-orange);
+      margin: var(--margin-auto);
+}
+
+
+.section-center {
+      width: 85vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 3rem auto;
+}
+
+article {
+      width: 550px;
+      margin: 1.5rem auto;
+      display: grid;
+      place-items: center;
+      grid-template-columns: 0.75fr 1.25fr;
+      background: #95cea9;
+      padding: 1rem;
+      border-radius: var(--border-radius);
+      transition: 1s;
+}
+
+article:hover {
+      transform: scale(1.1);
+}
+
+.item-text {
+      width: 80%;
+      text-align: center;
+      margin: var(--margin-auto);
+}
+
+img {
+      object-fit: cover;
+      width: 100%;
+      height: 200px;
+      border-radius: var(--border-radius);
+      border: 2px solid var(--cl-primary-1);
+      margin: var(--margin-auto);
+}
+
+header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 3px solid var(--cl-orange);
+      margin: 1em 0;
+      padding: 0;
+}
+
+.item-description {
+      margin-bottom: 0;
+      padding-top: 1rem
+}
+
+@media screen and (max-width:1300px) {
+      article {
+            display: block;
+            text-align: center;
+            margin: 2.5rem auto;
+      }
+      .section-center {
+            display: block;
+      }
+      img {
+            width: 300px;
+            height: auto;
+      }
+}
+
+@media screen and (max-width:800px) {
+      article {
+            display: block;
+            width: 70vw;
+            text-align: center;
+      }
+      .section-center {
+            display: block;
+            width: 80vw;
+      }
+      img {
+            width: 200px;
+      }
+}
