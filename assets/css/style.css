@@ -54,6 +54,27 @@ body {
       margin: var(--margin-auto);
 }
 
+.btn-container {
+      display: flex;
+      justify-content: center;
+      margin: 1rem;
+}
+
+.filter-btn {
+      background: transparent;
+      margin: 0 0.5rem;
+      padding: 0.5rem;
+      border-radius: var(--border-radius);
+      border: 2px solid var(--cl-orange);
+      outline: none;
+      font-weight: bolder;
+      transition: 1s;
+      text-align: center;
+}
+
+.filter-btn:hover{
+      background: var(--cl-article-1);
+}
 
 .section-center {
       width: 85vw;
@@ -71,7 +92,7 @@ article {
       background: #95cea9;
       padding: 1rem;
       border-radius: var(--border-radius);
-      transition: 1s;
+      transition: transform 1s;
 }
 
 article:hover {
@@ -122,10 +143,6 @@ hr {
       .section-center {
             display: block;
       }
-      img {
-            width: 300px;
-            height: auto;
-      }
 }
 
 @media screen and (max-width:800px) {
@@ -137,8 +154,5 @@ hr {
       .section-center {
             display: block;
             width: 80vw;
-      }
-      img {
-            width: 200px;
       }
 }
